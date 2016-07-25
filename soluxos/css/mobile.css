@@ -1,0 +1,19 @@
+/*
+Theme Name: soluxos
+Theme URI: http://www.callumharrod.com/
+Author: soluxos
+Author URI: http://www.callumharrod.com/
+Description: soluxos Mobile Theme Overrides
+Version: 1.0 Mobile
+License: Copyright Callum Harrod
+Text Domain: soluxos
+*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+	
+}

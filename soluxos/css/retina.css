@@ -1,0 +1,19 @@
+/*
+Theme Name: soluxos
+Theme URI: http://www.callumharrod.com/
+Author: soluxos
+Author URI: http://www.callumharrod.com/
+Description: soluxos Mobile Theme Overrides
+Version: 1.0 Mobile
+License: Copyright soluxos Ltd
+Text Domain: soluxos
+*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {  
+	a.logo {
+		background-image:url(../images/logo-retina.png);
+	}
+}

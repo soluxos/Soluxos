@@ -1,0 +1,264 @@
+/*
+	soluxos Bootstrap
+*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	outline:none;
+}
+
+/* structure */
+
+div {
+	position:relative;
+	height:auto;
+	overflow:visible;
+}
+
+.clear {
+	clear:both;
+}
+
+html, body {
+	width:100%;
+	height:100%;
+	margin:0;
+	z-index:0;
+}
+
+.full-width {
+	width:100%;
+	/*min-width:600px;*/
+}
+
+.fixed-width {
+	width:90%;
+	padding:0 5%;
+	margin:0 auto;
+	/*min-width:432px;*/
+	max-width:1080px;
+}
+
+#header-span {
+	z-index:1;
+}
+
+#content, #footer-span {
+	z-index:0;
+	overflow: hidden;
+}
+
+/* columns */
+
+.row {
+	clear:both;
+	padding-top:70px;
+	padding-bottom:70px;
+	text-align:center;
+	z-index: 5;
+}
+
+.row-inner {
+	display: flex;
+}
+
+.row.no-padding-top {
+	padding-top:0;
+}
+
+.row.no-padding-bottom {
+	padding-bottom:0;
+}
+
+.row.border {
+	border-bottom:1px solid #d4d4d4;
+}
+
+.column.one {
+	width:100%;
+	margin-right:0;
+	float:none;
+}
+
+/* images */
+
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+img {
+	border:none;
+	max-width:100%;
+	height:auto;
+	display:block;
+}
+
+/* logo */
+
+a.logo {
+	display:block;
+	cursor:pointer;
+	text-indent:-9999px;
+	text-transform:capitalize;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	background-image:url(../images/logo.png) !important;
+}
+
+/* forms */
+
+input[type="submit"], input[type="button"] {
+	-webkit-appearance: none;
+}
+
+input, textarea {
+	outline:none;
+	background:url(../images/field-bg.png) left top repeat transparent;
+}
+
+.gfield_label, .gform_validation_container {
+	display:none;
+}
+
+.gform_wrapper ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+div.validation_error, div.gform_confirmation_message {
+	padding:15px;
+}
+
+/* navigation */
+
+span#mobile-nav {
+	display:none;
+}
+
+.nav ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:right;
+}
+
+.nav ul li {
+	display:inline-block;
+}
+
+.nav ul li a {
+	display:block;
+}
+
+.nav ul li ul {
+	display:none;
+	position:absolute;
+	text-align:left;
+}
+
+.nav ul li ul li {
+	display:block;
+	clear:both;
+}
+
+.nav ul li:hover ul {
+	display:block;
+}
+
+#footer .nav ul {
+	text-align:center;
+}
+
+/* mobile */
+
+@media only screen 
+and (min-width : 600px) 
+and (max-width : 920px) {
+	.full-width {
+		/*min-width:600px;*/
+	}
+}
+
+@media only screen 
+and (min-width : 0px) 
+and (max-width : 480px) {
+	html, body, .full-width {
+		width:100%;
+		min-width:100%;
+		margin:0;
+	}
+	
+	span#mobile-nav {
+		display: inline-block;
+		float: right;
+		padding: 0 15px;
+		width: auto;
+		cursor:pointer;
+		color:#FFF;
+		background-color:#21CE99;
+		font-size:14px;
+		line-height:40px;
+		height:40px;
+	}
+	
+	span#mobile-nav span {
+		margin-left:5px;
+		font-size:1.2em;
+	}
+	
+	.fixed-width {
+		min-width:0;
+	}
+	
+	#content .row {
+		padding-bottom:0;
+	}
+	
+	#content .column {
+		float:none;
+		margin-right:0;
+		clear:both;
+		width:100%;
+	}
+	
+	#header .nav {
+		display:none;
+	}
+	
+	#header .nav.visi-nav {
+		display: block;
+		float: none;
+		left: 0;
+		position: absolute;
+		top: 40px;
+		width: 100%;
+		background-color: #43DFAF;
+		padding:5px 0;
+	}
+	
+	#header .nav.visi-nav a {
+		color:#FFF;
+		padding:10px 5%;
+	}
+	
+	.nav.visi-nav ul, .nav.visi-nav ul li ul, .nav.visi-nav ul li, .nav.visi-nav ul li ul li {
+		position:relative;
+		clear:both;
+		width:100%;
+		display:block;
+		text-align:left;
+		margin:0;
+		padding:0;
+	}
+	
+	.row-inner {
+		display:block;
+	} 
+}
