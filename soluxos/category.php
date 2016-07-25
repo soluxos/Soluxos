@@ -68,7 +68,6 @@ get_header(); ?>
                 var $j = jQuery.noConflict();
                 var buttonNumber = <?php echo $button_count; ?>;
 
-
                 $j(document).ready(function(){
                     for (var x = 0; x <= buttonNumber; x++) {
                         if (jQuery.cookie('button-' + x) != null){
@@ -76,7 +75,6 @@ get_header(); ?>
                             $j("#button-" + x).addClass("liked");
                         }
                         else {
-
                         }
                     };
 
