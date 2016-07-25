@@ -83,14 +83,12 @@ get_header(); ?>
                     $j(".like-button").click(function() {
                         var buttonClicked = (this.id);
                         $j(this).toggleClass("liked");
-                        console.log(buttonClicked);
                         jQuery.cookie(buttonClicked, 'active');
                     });
 
                     $j(".like-button.liked").click(function() {
                         var buttonClicked = (this.id);
                         $j.removeCookie(buttonClicked);
-                        console.log(buttonClicked);
                     });
 
                 });
