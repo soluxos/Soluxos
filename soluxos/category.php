@@ -68,6 +68,7 @@ get_header(); ?>
                 var $j = jQuery.noConflict();
                 var buttonNumber = <?php echo $button_count; ?>;
 
+
                 $j(document).ready(function(){
                     for (var x = 0; x <= buttonNumber; x++) {
                         if (jQuery.cookie('button-' + x) != null){
@@ -75,31 +76,23 @@ get_header(); ?>
                             $j("#button-" + x).addClass("liked");
                         }
                         else {
+
                         }
                     };
 
-                });
-
-                $j(function(){ 
-                    for (var i = 0; i <= buttonNumber; i++) {
-                        $j("#button-" + i).click(function() {
-                            var cookieNumber = jQuery(this).attr("id");
-                            jQuery.cookie(cookieNumber, 'active');
-                            $j(this).toggleClass("liked");
-                        });
-                    };
-                    for (var i = 0; i <= buttonNumber; i++) {
-                        $j("#button-" + i + ".liked").click(function() {
-                            var cookieNumber = jQuery(this).attr("id");
-                            $j.removeCookie(cookieNumber);
-                        });
-                    };
+                    $j(".like-button").click(function() {
+                        var buttonClicked = (this.id);
+                        $j(this).toggleClass("liked");
+                        console.log(buttonClicked);
+                        jQuery.cookie(buttonClicked, 'active');
+                    });
 
                     $j(".like-button.liked").click(function() {
                         var buttonClicked = (this.id);
-                        $j("#" + buttonClicked + ".liked").removeClass("liked");
                         $j.removeCookie(buttonClicked);
+                        console.log(buttonClicked);
                     });
+
                 });
             </script>
         </div>
